@@ -1,0 +1,26 @@
+﻿spring:
+    profiles:
+        active:
+           - dev
+---
+server:
+    port: 8021
+spring:
+    application:
+        name: microservicecloud-config-client
+    profiles: dev
+eureka:
+    client:
+        service-url:
+            defaultZone: http://eureka-dev.com:7001/eureka/
+---
+server:
+    port: 8022
+spring:
+    application:
+        name: microservicecloud-config-client
+    profiles: test
+eureka;
+    client:
+        service-url:
+            defaultZone: http://eureka-test.com:7002/eureka/
